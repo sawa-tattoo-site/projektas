@@ -1,0 +1,100 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://sawatattoo.lt"
+
+collections:
+  - name: "site"
+    label: "Svetainės nuostatos"
+    files:
+      - file: "content/site.json"
+        label: "Pagrindiniai nustatymai"
+        name: "site"
+        fields:
+          - {label: "Pavadinimas", name: "artistName", widget: "string"}
+          - {label: "Šūkis", name: "tagline", widget: "string"}
+          - {label: "Vietovė", name: "location", widget: "string"}
+          - {label: "El. paštas", name: "email", widget: "string"}
+          - {label: "Telefonas", name: "phone", widget: "string"}
+          - {label: "Instagram URL", name: "instagramUrl", widget: "string", required: false}
+          - {label: "TikTok URL", name: "tiktokUrl", widget: "string", required: false}
+          - {label: "Booking URL (Fresha/Calendly)", name: "bookingUrl", widget: "string", required: false}
+
+  - name: "gallery"
+    label: "Galerija"
+    label_singular: "Darbas"
+    files:
+      - file: "content/gallery/index.json"
+        label: "Darbų sąrašas"
+        name: "galleryindex"
+        fields:
+          - label: "Darbai"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Alt", name: "alt", widget: "string"}
+              - {label: "Nuotrauka", name: "src", widget: "image"}
+
+  - name: "pricing"
+    label: "Kainos"
+    files:
+      - file: "content/pricing.json"
+        label: "Planai"
+        name: "pricing"
+        fields:
+          - label: "Kortelės"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Pavadinimas", name: "title", widget: "string"}
+              - {label: "Kaina", name: "price", widget: "string"}
+              - {label: "Išskirtinė", name: "featured", widget: "boolean", required: false}
+              - label: "Įtraukti punktai"
+                name: "includes"
+                widget: "list"
+                field: {label: "Punktas", name: "item", widget: "string"}
+
+  - name: "faq"
+    label: "DUK"
+    files:
+      - file: "content/faq.json"
+        label: "Klausimai ir atsakymai"
+        name: "faq"
+        fields:
+          - label: "Įrašai"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Klausimas", name: "q", widget: "string"}
+              - {label: "Atsakymas", name: "a", widget: "text"}
+
+  - name: "aftercare"
+    label: "Priežiūra"
+    files:
+      - file: "content/aftercare.json"
+        label: "Žingsniai"
+        name: "aftercare"
+        fields:
+          - label: "Žingsniai"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Antraštė", name: "title", widget: "string"}
+              - {label: "Tekstas", name: "text", widget: "text"}
+
+  - name: "contact"
+    label: "Kontaktai"
+    files:
+      - file: "content/contact.json"
+        label: "Kontaktų informacija"
+        name: "contact"
+        fields:
+          - {label: "Adresas", name: "address", widget: "string"}
+          - {label: "El. paštas", name: "email", widget: "string"}
+          - {label: "Telefonas", name: "phone", widget: "string"}
+          - {label: "Facebook Page URL", name: "facebookPage", widget: "string", required: false}

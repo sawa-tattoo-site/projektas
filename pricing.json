@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Mini",
+    "price": "€60–€100",
+    "includes": [
+      "Iki 5 cm",
+      "Fine line / simboliai",
+      "~30–60 min"
+    ]
+  },
+  {
+    "title": "Vidutinė",
+    "price": "€120–€250",
+    "includes": [
+      "5–12 cm",
+      "Juoda / spalvos",
+      "1–3 val."
+    ],
+    "featured": true
+  },
+  {
+    "title": "Didelė",
+    "price": "€300+",
+    "includes": [
+      "Rankovės / nugaros",
+      "Keli seansai",
+      "Kainodara pagal valandas"
+    ]
+  }
+]
