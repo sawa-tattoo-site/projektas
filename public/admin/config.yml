@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: sawa-tattoo-site/projektas
+  branch: main
+  base_url: https://cozy-chebakia-ae03db.netlify.app
+  auth_endpoint: /auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.json"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
